@@ -1,1 +1,8 @@
-readme test MD
+As described in the README, data were combined from six raw text files and then narrowed down to columns for "subject" (the person wearing a smartphone, given an integer from 1 to 30) and "activity" (what they were doing at the time of the observation, one of six strings) plus 66 more columns with numerical values.  This dataframe, "tidy," is indeed tidy as shown in README.  These 66 values are particular features of the signals observed from the accelerometers in the smartphones, namely the ones that contain "mean()" or "std()" in their original labels.  
+
+The 66 column names were modified to be more descriptive, following a convention:
+"Words" start with a capital letter.  The first word indicates whether the variable is from the time or frequency domains (raw signals were sampled in time but then transformed into frequency mode to generate more variables).  The last letter, if X, Y or Z, indicates the direction of motion in space. Whether or not there is X/Y/Z, there is either "Mean" or "Std" at the end of each name to indicate which is being used.  The words in the middle indicate what is being measured, for example Body Gyroscope Jerk in the names for "tidy" columns 27-32.  "Acc" means acceleration.  "Mag" means maginitude of Euclidean norm.
+
+All of the data come from filtered signals and calculations done on those signals, but they have all been normalized to vary between negative one and one, so the original units are now relative.
+
+The output dataframe is a summary of "tidy" showing the average value of each of the 66 variables for each combination of "subject" and "activity" in "tidy" (for a total of 68 columns).  
